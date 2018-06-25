@@ -1,0 +1,118 @@
+@font-face {
+  font-family: 'portfolio';
+  src: url('../font/portfolio.eot?80924337');
+  src: url('../font/portfolio.eot?80924337#iefix') format('embedded-opentype'),
+       url('../font/portfolio.woff2?80924337') format('woff2'),
+       url('../font/portfolio.woff?80924337') format('woff'),
+       url('../font/portfolio.ttf?80924337') format('truetype'),
+       url('../font/portfolio.svg?80924337#portfolio') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'portfolio';
+    src: url('../font/portfolio.svg?80924337#portfolio') format('svg');
+  }
+}
+*/
+ 
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "portfolio";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+ 
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+ 
+.icon-cancel:before { content: '\e800'; } /* '' */
+.icon-down-open:before { content: '\e801'; } /* '' */
+.icon-right-open:before { content: '\e802'; } /* '' */
+.icon-left-open:before { content: '\e803'; } /* '' */
+.icon-up-open:before { content: '\e804'; } /* '' */
+.icon-email:before { content: '\e805'; } /* '' */
+.icon-doc-text:before { content: '\e806'; } /* '' */
+.icon-emo-unhappy:before { content: '\e807'; } /* '' */
+.icon-doc-text-inv:before { content: '\e808'; } /* '' */
+.icon-doc-text-1:before { content: '\e809'; } /* '' */
+.icon-github:before { content: '\e80a'; } /* '' */
+.icon-linkedin-squared:before { content: '\e80b'; } /* '' */
+.icon-mail-circled:before { content: '\e80c'; } /* '' */
+.icon-down-circled2:before { content: '\e80d'; } /* '' */
+.icon-attach-circled:before { content: '\e80e'; } /* '' */
+.icon-emo-cry:before { content: '\e80f'; } /* '' */
+.icon-edit-circled:before { content: '\e810'; } /* '' */
+.icon-doc-circled:before { content: '\e811'; } /* '' */
+.icon-github-circled-alt2:before { content: '\f056'; } /* '' */
+.icon-github-circled:before { content: '\f09b'; } /* '' */
+.icon-menu:before { content: '\f0c9'; } /* '' */
+.icon-mail-alt:before { content: '\f0e0'; } /* '' */
+.icon-file-code:before { content: '\f1c9'; } /* '' */
+.icon-copyright:before { content: '\f1f9'; } /* '' */
+.icon-trademark:before { content: '\f25c'; } /* '' */
+.icon-id-badge:before { content: '\f2c1'; } /* '' */
+.icon-github-squared:before { content: '\f300'; } /* '' */
+.icon-twitter-squared:before { content: '\f304'; } /* '' */
+.icon-twitter:before { content: '\f309'; } /* '' */
+.icon-twitter-circled:before { content: '\f30a'; } /* '' */
+.icon-facebook:before { content: '\f30c'; } /* '' */
+.icon-facebook-circled:before { content: '\f30d'; } /* '' */
+.icon-facebook-squared:before { content: '\f30e'; } /* '' */
+.icon-gplus-circled:before { content: '\f310'; } /* '' */
+.icon-linkedin:before { content: '\f318'; } /* '' */
+.icon-linkedin-circled:before { content: '\f319'; } /* '' */
+.icon-skype-circled:before { content: '\f33a'; } /* '' */
+
+.icon-mail-circled {
+    color: #ea4335;
+}
+
+.icon-github-circled {
+    color: #6e5494;
+}
+
+.icon-twitter-circled {
+    color: #1da1f2;
+}
+
+.icon-linkedin-circled {
+    color: #0077b5;
+}
+
+.icon-doc-circled {
+    color: lawngreen;
+}
+
+.icon-emo-unhappy {
+    color: #ea4335;
+}

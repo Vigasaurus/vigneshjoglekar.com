@@ -1,0 +1,21 @@
+//CORE Imports
+import React, { Component } from 'react';
+
+class Footer extends Component {
+    render() {
+        return (
+            <footer id="footer" className="footer theme">
+                <p className="footer__copyright product_sans"> Copyright
+                    <span className="icon-copyright"/>
+                    <span id="footer__year">  -- 2017 - {(new Date()).getFullYear()} --  </span>
+                    <a id="footer_home" className="footer__link">vigneshjoglekar.com  </a>
+                    <a className="git-link" href="https://github.com/Vigasaurus/react-portfolio/" title="View on Github">
+                        <span className="devicons-footer devicon-github-plain colored" />
+                    </a>
+                </p>
+            </footer>
+        );
+    }
+}
+
+export default Footer;

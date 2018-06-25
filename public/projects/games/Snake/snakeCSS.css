@@ -1,0 +1,132 @@
+#p5_title_wrapper {
+    width: window.innerWidth;
+    height: window.innerHeight - 20;
+    overflow: hidden;
+    border: 0px solid red;
+    display: flex;
+}
+
+#p5js-container {
+    align: left;
+    background-color: #4286f4;
+    padding: 0px;
+    float: left;
+    outline-color: #4286f4;
+    width: "100%";
+    float: left;
+}
+
+#title_wrapper {
+    flex-grow: 1;
+    padding: 10px;
+    border: 0px solid yellow;
+
+}
+
+#title-container {
+    padding: 2px;
+    background-color: #4286f4;
+    border: 0px solid green;
+    height: 150px;
+    text-align: center;
+    width: 50%;
+    margin: auto;
+    align: center;
+}
+
+#title-container_2 {
+    padding: 0px;
+    background-color: #4286f4;
+    border: 0px solid red;
+    height: 20px;
+    text-align: center;
+    width: 50%;
+    margin: auto;
+    align: center;
+}
+
+#highscores_container {
+    padding: 25px;
+    background-color: #4286f4;
+    border: 0px solid red;
+    height: 200px;
+    text-align: center;
+    width: 50%;
+    margin: auto;
+    align: center;
+
+}
+
+h1 {
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    color: yellow;
+    font-size: 90px;
+    padding: 0px;
+}
+
+h2 {
+    font-family: 'Lato', sans-serif;
+    color: red;
+    font-size: 20px;
+    padding: 0px;
+
+}
+
+h3 {
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    color: yellow;
+    font-size: 18px;
+    padding: 0px;
+}
+
+h4 {
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    color: purple;
+    font-size: 19px;
+    padding: 0px;
+}
+
+
+footer {
+    font-size: 11px;
+    color: black;
+    text-align: center;
+}
+
+body {
+    background-color: #4286f4
+}
+
+table {
+    text-align: center;
+    width: 50%;
+    margin: auto;
+    align: center;
+    border-collapse: collapse;
+
+}
+
+#name_submit {
+    padding: 15px;
+    align: center;
+    margin: auto;
+    width: 50%;
+    text-align: center;
+    border: 0px solid red;
+}
+
+#name_sub {
+    align: center;
+    width: 69%;
+    padding: 5px;
+}
+
+#name_but {
+    padding: 5px align: center;
+    text-align: center;
+    width: 75%;
+
+}

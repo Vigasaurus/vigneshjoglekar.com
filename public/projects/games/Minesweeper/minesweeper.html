@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.9/p5.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="minesweeper.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Oswald|Raleway" rel="stylesheet">
+    <link rel="icon" href="minesweeper_icon.png">
+
+</head>
+
+<body oncontextmenu="return false;">
+    <div class="minesweeper">
+        <div id="p5js-container" class="p5js-container"></div>
+        <div class="customize">
+            <h3 id="customize_header">Customize the Game!</h3>
+
+            <!--TODO: Recommended Number of Mines -->
+            <div id="minecontainer">
+                <p class="mine_tooltip">Number of Mines</p>
+                <input type="range" min="1" max="50" value="25" class="slider" id="mine_slider">
+                <p id="mine_number"></p>
+            </div>
+
+
+            <div id="widthcontainer">
+                <p class="width_tooltip">Number of Columns</p>
+                <input type="range" min="2" max="30" value="15" class="slider" id="width_slider">
+                <p id="width_number"></p>
+            </div>
+
+
+            <div id="heightcontainer">
+                <p class="height_tooltip">Number of Rows</p>
+                <input type="range" min="2" max="30" value="15" class="slider" id="height_slider">
+                <p id="height_number"></p>
+            </div>
+
+            <button class="btn orange" type="button" onclick="reload()"><span>Reload Board</span></button>
+
+
+        </div>
+
+        <div class="title_win">
+            <h1 class="title">Minesweeper!</h1>
+            <h2 class="author">By: Vignesh Joglekar</h2>
+            <img id="icon" src="minesweeper_icon.png" height="160" width="160" alt="Not Loaded? Try Reloading!">
+
+            <div class="spacer" style="height:10px;"></div>
+
+            <div class="win_lose">
+                <h2 id="win">Congratulations!</h2>
+                <h2 id="lose">Game Over!</h2>
+                <h3 id="cont">"Use the customize menu above to restart!"</h3>
+            </div>
+        </div>
+
+        <script src="minesweeper.js"></script>
+        <script src="Cell.js"></script>
+
+        <script>
+            function reload() {
+                reset();
+            }
+
+
+
+            var mine_s, mine_n, width_s, width_n, height_s, height_n;
+
+            mine_s = document.getElementById("mine_slider");
+            mine_n = document.getElementById("mine_number");
+
+            width_s = document.getElementById("width_slider");
+            width_n = document.getElementById("width_number");
+
+            height_s = document.getElementById("height_slider");
+            height_n = document.getElementById("height_number");
+
+
+            var max_height = window.innerHeight;
+            max_height -= max_height % 100;
+            max_height -= 40;
+            max_height /= 20;
+
+            var max_width = max_height;
+
+            var max_mines;
+            max_mines = width_s.value * height_s.value;
+            max_mines -= 1;
+
+
+
+            height_s.max = "" + max_height;
+            height_s.value = max_height / 2;
+            width_s.max = "" + max_width;
+            width_s.value = max_width / 2;
+            mine_s.max = max_mines;
+            mine_s.value = 25;
+
+
+            mine_n.innerHTML = mine_s.value;
+            width_n.innerHTML = width_s.value;
+            height_n.innerHTML = height_s.value;
+
+            mine_s.oninput = function() {
+                mine_n.innerHTML = mine_s.value;
+            };
+
+            width_s.oninput = function() {
+                width_n.innerHTML = width_s.value;
+                max_mines = width_s.value * height_s.value;
+                max_mines -= 1;
+                mine_s.max = max_mines;
+                mine_n.innerHTML = mine_s.value;
+
+
+            };
+
+            height_s.oninput = function() {
+                height_n.innerHTML = height_s.value;
+                max_mines = width_s.value * height_s.value;
+                max_mines -= 1;
+                mine_s.max = max_mines;
+                mine_n.innerHTML = mine_s.value;
+
+            }
+
+        </script>
+
+    </div>
+</body>
+
+</html>

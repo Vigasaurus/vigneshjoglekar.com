@@ -1,0 +1,13 @@
+Timer - Meh Need to Look into it
+Customizable - EASY
+	Grid
+		Width
+		Height
+	Number of Mines - 
+Flags - Easy
+Win - Somewhat Easy
+Title - Easy
+Click Smiley to Reset - Easy
+
+45 minutes? 90?
+
