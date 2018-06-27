@@ -1,7 +1,7 @@
 //CORE Imports
 import React, { Component } from 'react';
 
-class Home extends Component {
+export default class Home extends Component {
     render() {
         return (
             <div id="home_container" className="container theme animated slideInDown" hidden={!(this.props.activePage === "home")}>
@@ -13,5 +13,3 @@ class Home extends Component {
         );
     }
 }
-
-export default Home;

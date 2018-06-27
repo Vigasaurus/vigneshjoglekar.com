@@ -1,25 +1,13 @@
 //CORE Imports
 import React, { Component } from 'react';
 
-class Overview extends Component {
+export default class Overview extends Component {
     render() {
         return (
             <div id="overview_container" className="container theme animated slideInDown" hidden={this.props.activePage !== "overview"}>
                 <div className="page page--about">
                     <h2 className="page__title aboutTitle product_sans">My name is Vignesh Joglekar</h2>
-                    <p className="page__description product_sans">I am an 18 year old Front-End Developer from Coppell, Texas.
-                        I am enrolled in Texas A&M Bachelor of Science in Computer Science, Class of '22. I've been
-                        interested and drawn to websites and applications and their development for years. Over the past
-                        4
-                        years I have focused on learning through projects. I always felt that it was easier to learn
-                        through
-                        doing as opposed to watching. I originally only recreated basic games with new programming
-                        languages
-                        I was learning at the time, now I focus on making interactive and easily-navigable websites with
-                        user
-                        usability as my top priority. I prefer to work in a team to create minimalistic, yet feature
-                        rich and
-                        user-friendly websites and web-based applications. </p>
+                    <p className="page__description product_sans">I am an 18 year old Front-End Developer from Coppell, Texas. I am enrolled in Texas A&M Bachelor of Science in Computer Science, Class of '22. I've been interested and drawn to websites and applications and their development for years. Over the past 4 years I have focused on learning through projects. I always felt that it was easier to learn through doing as opposed to watching. I originally only recreated basic games with new programming languages I was learning at the time, now I focus on making interactive and easily-navigable websites with user usability as my top priority. I prefer to work in a team to create minimalistic, yet feature and user-friendly websites and web-based applications. </p>
 
                     <div className="skillsWrapper">
                         <div className="skillsUsing">
@@ -135,5 +123,3 @@ class Overview extends Component {
         );
     }
 }
-
-export default Overview;

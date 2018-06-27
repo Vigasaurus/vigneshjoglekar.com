@@ -1,19 +1,13 @@
 //CORE Imports
 import React, { Component } from 'react';
 
-//Images Imports
-import gpvImage from './img/projects/gpvThumb.png';
-import siteImage from './img/projects/siteThumb.png';
-import bpaImage from './img/projects/bpaCaresThumb.png';
-import minesweeperImage from './img/projects/minesweeperThumb.png';
-
 //JS Imports
 import Siema from 'siema';
 
 let siemaCreated = false;
 let mySiemaWithDots;
 
-class Projects extends Component {
+export default class Projects extends Component {
 
     constructor(props) {
         super(props);
@@ -152,7 +146,7 @@ class Projects extends Component {
                                 <span className="projects__tag">RESTful</span>
 
                             </div>
-                            <img className="projects__photo " src={gpvImage}
+                            <img className="projects__photo " src={require('./img/projects/gpvThumb.png')}
                                  alt="Github Profile Viewer Screenshot"/>
                                 <a className="projects__link projectLive product_sans"
                                    href="https://vigneshjoglekar.com/projects/react/GithubProfileViewer/"
@@ -178,7 +172,7 @@ class Projects extends Component {
 
 
                             </div>
-                            <img className="projects__photo " src={siteImage} alt="This Website Screenshot"/>
+                            <img className="projects__photo " src={require('./img/projects/siteThumb.png')} alt="This Website Screenshot"/>
                                 <a className="projects__link projectLive product_sans"
                                    href="https://vigneshjoglekar.com/"
                                    title="Open This Project"
@@ -203,7 +197,7 @@ class Projects extends Component {
                                 <span className="projects__tag dark-theme">jQuery</span>
 
                             </div>
-                            <img className="projects__photo " src={bpaImage} alt="BPACares.org Screenshot"/>
+                            <img className="projects__photo " src={require('./img/projects/bpaCaresThumb.png')} alt="BPACares.org Screenshot"/>
                                 <a className="projects__link projectLive product_sans" href="https://bpacares.org"
                                    title="Open BPACares.org" target="_blank" rel="noopener noreferrer">Open Project</a>
                                 <p className="projects__description gridDescription product_sans">Business Professionals
@@ -225,7 +219,7 @@ class Projects extends Component {
                                 <span className="projects__tag dark-theme">JavaScript</span>
                                 <span className="projects__tag dark-theme">ES6</span>
                             </div>
-                            <img className="projects__photo " src={minesweeperImage}
+                            <img className="projects__photo " src={require('./img/projects/minesweeperThumb.png')}
                                  alt="Minesweeper Client Screenshot"/>
                                 <a className="projects__link projectLive product_sans"
                                    href="https://vigneshjoglekar.com/projects/games/Minesweeper/minesweeper"
@@ -245,5 +239,3 @@ class Projects extends Component {
         );
     }
 }
-
-export default Projects;

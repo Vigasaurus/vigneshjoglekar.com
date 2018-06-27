@@ -20,12 +20,14 @@ import Organizations from './Organizations.jsx';
 import Contact from './Contact.jsx';
 import Footer from './Footer.jsx';
 
-class Site extends Component {
+
+export default class Site extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
             currentPage: "home",
+            text: {},
         };
         this.changePage = this.changePage.bind(this);
         this.animatePageChange = this.animatePageChange.bind(this);
@@ -69,7 +71,12 @@ class Site extends Component {
     }
 
     componentDidMount() {
-        //this.setState({currentPage: "home"});
+        fetch('https://vigneshjoglekar.com/en_US.json').then(r => r.json())
+            .then(data => {
+                console.log(data);
+                this.setState({text: data})
+            })
+            .catch(e => console.log(e));
 
         // Nav elements
         let navList = document.querySelector(".nav__list");
@@ -130,16 +137,14 @@ class Site extends Component {
     render() {
         return (
           <div className="theme overflow-horz-off">
-              <Nav                                                  />
-              <Home             activePage={this.state.currentPage} />
-              <Overview         activePage={this.state.currentPage} />
-              <Projects         activePage={this.state.currentPage} />
-              <Organizations    activePage={this.state.currentPage} />
-              <Contact          activePage={this.state.currentPage} />
-              <Footer                                               />
+              <Nav                                                  text={this.state.text.logo}             />
+              <Home             activePage={this.state.currentPage}                                         />
+              <Overview         activePage={this.state.currentPage} text={this.state.text.overview}         />
+              <Projects         activePage={this.state.currentPage} text={this.state.text.projects}         />
+              <Organizations    activePage={this.state.currentPage} text={this.state.text.organizations}    />
+              <Contact          activePage={this.state.currentPage}                                         />
+              <Footer                                                                                       />
           </div>
         );
     }
 }
-
-export default Site;

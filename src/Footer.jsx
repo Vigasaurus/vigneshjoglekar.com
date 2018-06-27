@@ -1,7 +1,7 @@
 //CORE Imports
 import React, { Component } from 'react';
 
-class Footer extends Component {
+export default class Footer extends Component {
     render() {
         return (
             <footer id="footer" className="footer theme">
@@ -17,5 +17,3 @@ class Footer extends Component {
         );
     }
 }
-
-export default Footer;

@@ -1,17 +1,14 @@
 //CORE Imports
 import React, { Component } from 'react';
 
-//Logo Import
-import logo from './img/logo/logo.png';
-
-class Nav extends Component {
-
+export default class Nav extends Component {
     render() {
+        let logo = this.props.text;
         return (
             <div>
                 <nav className="nav theme">
                     <a className="nav__link nav__link--start" id="logo" title="Home">
-                        <img className="nav__logo" src={logo} alt="Vignesh Joglekar" />
+                        <img className="nav__logo" src={"https://vigneshjoglekar.com/static" + logo} alt="Vignesh Joglekar" />
                     </a>
                     <ul className="nav__list">
                         <li className="nav__item">
@@ -34,5 +31,3 @@ class Nav extends Component {
         );
     }
 }
-
-export default Nav;

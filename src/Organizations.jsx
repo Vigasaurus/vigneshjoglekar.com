@@ -1,13 +1,8 @@
 //CORE Imports
 import React, { Component } from 'react';
 
-//Image Imports
-import oA from './img/orgLogos/oA.png';
-import ml5 from './img/orgLogos/ml5.png';
-import sugar from './img/orgLogos/sugar.png';
 
-
-class Organizations extends Component {
+export default class Organizations extends Component {
     render() {
         return (
             <div id="orgs_container" className="container theme animated slideInDown" hidden={!(this.props.activePage === "orgs")}>
@@ -21,7 +16,7 @@ class Organizations extends Component {
                             <ul className="orgs">
                                 <li className="orgs__org">
                                     <a className="orgs__link" href="https://github.com/OpenApprenticeFoundation/" title="Go To Organization's Github Page">
-                                        <img className="org__image" src={oA} alt="oA"/>
+                                        <img className="org__image" src={require('./img/orgLogos/oA.png')} alt="oA Logo"/>
                                         <p className="orgs__text product_sans">OpenApprentice<br/>Foundation</p>
                                     </a>
                                 </li>
@@ -34,13 +29,13 @@ class Organizations extends Component {
                             <ul className="orgs">
                                 <li className="orgs__org">
                                     <a className="orgs__link" href="https://github.com/ml5js/" title="Go To Organization's Github Page">
-                                        <img className="org__image" src={ml5} alt="ML5.JS"/>
+                                        <img className="org__image" src={require('./img/orgLogos/ml5.png')} alt="ML5.JS Logo"/>
                                         <p className="orgs__text product_sans">ml5.js</p>
                                     </a>
                                 </li>
                                 <li className="orgs__org">
                                     <a className="orgs__link" href="https://github.com/sugarlabs/" title="Go To Organization's Github Page">
-                                        <img className="org__image" src={sugar} alt="Sugar Labs"/>
+                                        <img className="org__image" src={require('./img/orgLogos/sugar.png')} alt="Sugar Labs Logo"/>
                                         <p className="orgs__text product_sans">Sugar Labs</p>
                                     </a>
                                 </li>
@@ -53,5 +48,3 @@ class Organizations extends Component {
         );
     }
 }
-
-export default Organizations;
