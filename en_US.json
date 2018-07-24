@@ -1,0 +1,145 @@
+{
+  "logo": "./img/logo/logo.png",
+  "overview": {
+    "bio": "I am an 18 year old Front-End Developer from Coppell, Texas. I am enrolled in Texas A&M Bachelor of Science in Computer Science, Class of '22. I've been interested and drawn to websites and applications and their development for years. Over the past 4 years I have focused on learning through projects. I always felt that it was easier to learn through doing as opposed to watching. I originally only recreated basic games with new programming languages I was learning at the time, now I focus on making interactive and easily-navigable websites with user usability as my top priority. I prefer to work in a team to create minimalistic, yet feature and user-friendly websites and web-based applications. ",
+    "using": [
+      {
+        "class": "devicon-html5-plain",
+        "title": "HTML5"
+      },
+      {
+        "class": "devicon-css3-plain",
+        "title": "CSS3"
+      },
+      {
+        "class": "devicon-javascript-plain",
+        "title": "JS ES6"
+      },
+      {
+        "class": "devicon-react-plain",
+        "title": "React.js"
+      },
+      {
+        "class": "devicon-nodejs-plain",
+        "title": "Node.js"
+      },
+      {
+        "class": "devicon-jquery-plain",
+        "title": "jQuery"
+      },
+      {
+        "class": "devicon-github-plain",
+        "title": "Github"
+      },
+      {
+        "class": "devicon-webpack-plain",
+        "title": "WebPack"
+      },
+      {
+        "class": "devicon-bootstrap-plain",
+        "title": "Bootstrap"
+      }
+
+    ],
+    "learning": [
+      {
+        "class": "devicon-laravel-plain",
+        "title": "Laravel"
+      },
+      {
+        "class": "devicon-angularjs-plain",
+        "title": "Angular.js"
+      },
+      {
+        "class": "devicon-meteor-plain",
+        "title": "Meteor"
+      },
+      {
+        "class": "devicon-vuejs-plain",
+        "title": "Vue.js"
+      },
+      {
+        "class": "devicon-aws-plain",
+        "title": "AWS"
+      },
+      {
+        "class": "devicon-postgresql-plain",
+        "title": "PostgreSQL"
+      },
+      {
+        "class": "devicon-php-plain",
+        "title": "PHP"
+      },
+      {
+        "class": "devicon-mongodb-plain",
+        "title": "MongoDB"
+      },
+      {
+        "class": "devicon-docker-plain",
+        "title": "Docker"
+      }
+    ]
+  },
+
+  "projects": {
+    "list": [
+      {
+        "title": "Github Profile Viewer",
+        "tags": ["React", "Bootstrap", "Flexbox", "ES6", "jQuery", "RESTful"],
+        "image_path": "./img/projects/gpvThumb.png",
+        "live_url": "https://vigneshjoglekar.com/projects/react/GithubProfileViewer/",
+        "description": "Github Profile Viewer made in React.js utilizing the Github RESTful API.",
+        "source_url": "https://github.com/Vigasaurus/vigasaurus.github.io/tree/master/projects/react/GithubProfileViewer"
+      },
+      {
+        "title": "This Website",
+        "tags": ["React", "ES6", "Webpack"],
+        "image_path": "./img/projects/siteThumb.png",
+        "live_url": "https://vigneshjoglekar.com/",
+        "description": "This website, made as a single-page-application with React.js and JavaScript ES6. Compiled and Built with Webpack.",
+        "source_url": "https://github.com/Vigasaurus/vigasaurus.github.io/tree/master"
+      },
+      {
+        "title": "BPACares.org",
+        "tags": ["HTML", "CSS", "Javascript", "jQuery"],
+        "image_path": "./img/projects/bpaCaresThumb.png",
+        "live_url": "https://bpacares.org/",
+        "description": "Business Professionals of America Team Project, made with HTML and CSS in a team setting, properly hosted and issue tracked using GitHub.",
+        "source_url": "https://github.com/BPACares/BPACares.org"
+      },
+      {
+        "title": "Minesweeper",
+        "tags": ["P5.js", "Flexbox", "ES6"],
+        "image_path": "./img/projects/minesweeperThumb.png",
+        "live_url": "https://vigneshjoglekar.com/projects/games/Minesweeper/minesweeper",
+        "description": "Re-creation of the original Minesweeper Puzzle, made in JavaScript with P5.JS library, includes randomly generated puzzles with completely customizable gameplay",
+        "source_url": "https://github.com/Vigasaurus/vigasaurus.github.io/tree/master/projects/games/Minesweeper"
+      }
+    ]
+  },
+
+  "organizations": {
+    "info": "For nearly all of my projects  I've worked alone or with only a group of 2 or 3 developers. Recently I delved into the world of open-source projects and organizations. Below are some organizations I contribute to and participate in in, both in a minor and major way. All contributions I've made can be seen on the respective Github pages for the organizations.",
+    "major": [
+      {
+        "image_path": "./img/orgLogos/oA.png",
+        "title": "OpenApprentice Foundation",
+        "github_url": "https://github.com/OpenApprenticeFoundation/"
+      }
+
+    ],
+    "minor": [
+      {
+        "image_path": "./img/orgLogos/oA.png",
+        "title": "ml5.js",
+        "github_url": "https://github.com/ml5js/"
+      },
+      {
+        "image_path": "./img/orgLogos/oA.png",
+        "title": "Sugar Labs",
+        "github_url": "https://github.com/sugarlabs/"
+      }
+
+    ]
+  }
+}
