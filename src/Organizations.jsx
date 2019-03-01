@@ -5,7 +5,7 @@ import React, { Component } from 'react';
 export default class Organizations extends Component {
     render() {
         return (
-            <div id="orgs_container" className="container theme animated slideInDown" hidden={!(this.props.activePage === "orgs")}>
+            <div id="orgs_container" className="container theme animated slideInDown">
                 <div className="page page--about">
                     <h2 className="page__title product_sans">Organizations</h2>
                     <p className="page__description product_sans">For nearly all of my projects  I've worked alone or with only a group of 2 or 3 developers. Recently I delved into the world of open-source projects and organizations. Below are some organizations I contribute to and participate in in, both in a minor and major way. All contributions I've made can be seen on the respective Github pages for the organizations. </p>

@@ -1,4 +1,5 @@
 @font-face {
+    font-display: block;
   font-family: 'portfolio';
   src: url('../font/portfolio.eot?80924337');
   src: url('../font/portfolio.eot?80924337#iefix') format('embedded-opentype'),

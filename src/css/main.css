@@ -42,14 +42,16 @@
 }
 
 .nav__logo {
-    width: 27rem;
+    max-width: 27rem;
+    width: auto;
+    height: auto;
     border-bottom: none;
     margin: .33rem 0 0 1.5rem;
 }
 
 @media screen and (max-width: 1200px) {
     .nav__logo {
-        width: 20rem;
+        max-width: 20rem;
         margin: 1rem 0 0 1.5rem;
 
     }
@@ -142,6 +144,10 @@
     -webkit-box-flex: 0;
     -ms-flex-positive: 0;
     flex-grow: 0;
+}
+
+.nav__item:hover {
+	cursor: pointer;
 }
 
 @media screen and (max-width: 767px) {

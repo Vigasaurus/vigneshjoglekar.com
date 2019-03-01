@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 export default class Overview extends Component {
     render() {
         return (
-            <div id="overview_container" className="container theme animated slideInDown" hidden={this.props.activePage !== "overview"}>
+            <div id="overview_container" className="container theme animated slideInDown">
                 <div className="page page--about">
                     <h2 className="page__title aboutTitle product_sans">My name is Vignesh Joglekar</h2>
                     <p className="page__description product_sans">I am an 18 year old Front-End Developer from Coppell, Texas. I am enrolled in Texas A&M Bachelor of Science in Computer Science, Class of '22. I've been interested and drawn to websites and applications and their development for years. Over the past 4 years I have focused on learning through projects. I always felt that it was easier to learn through doing as opposed to watching. I originally only recreated basic games with new programming languages I was learning at the time, now I focus on making interactive and easily-navigable websites with user usability as my top priority. I prefer to work in a team to create minimalistic, yet feature and user-friendly websites and web-based applications. </p>
@@ -48,6 +48,11 @@ export default class Overview extends Component {
                                     <span className="devicons devicon-github-plain colored"/>
                                     <p className="skills__text product_sans">GitHub</p>
                                 </li>
+                                {/*Travis*/}
+                                <li className="skills__skill">
+                                    <span className="devicons devicon-travis-plain colored"/>
+                                    <p className="skills__text product_sans">Travis CI</p>
+                                </li>
                                 {/*Webpack*/}
                                 <li className="skills__skill">
                                     <span className="devicons devicon-webpack-plain colored"/>
@@ -65,20 +70,20 @@ export default class Overview extends Component {
                         <div className="skillsLearning">
                             <p className="page__subtitle product_sans">I am currently learning: </p>
                             <ul className="skills">
-                                {/*Laravel*/}
+                                {/*Express*/}
                                 <li className="skills__skill">
-                                    <span className="devicons devicon-laravel-plain colored"/>
-                                    <p className="skills__text product_sans">Laravel</p>
+                                    <span className="devicons devicon-express-original"/>
+                                    <p className="skills__text product_sans">Express</p>
                                 </li>
                                 {/*Angular*/}
                                 <li className="skills__skill">
                                     <span className="devicons devicon-angularjs-plain colored"/>
                                     <p className="skills__text product_sans">Angular.js</p>
                                 </li>
-                                {/*Meteor*/}
+                                {/*Gulp*/}
                                 <li className="skills__skill">
-                                    <span className="devicons devicon-meteor-plain colored"/>
-                                    <p className="skills__text product_sans">Meteor</p>
+                                    <span className="devicons devicon-gulp-plain colored"/>
+                                    <p className="skills__text product_sans">Gulp</p>
                                 </li>
                                 {/*Vue*/}
                                 <li className="skills__skill">
@@ -90,15 +95,10 @@ export default class Overview extends Component {
                                     <span className="devicons devicon-amazonwebservices-original colored"/>
                                     <p className="skills__text product_sans">AWS</p>
                                 </li>
-                                {/*Postgre*/}
+                                {/*Sass*/}
                                 <li className="skills__skill">
-                                    <span className="devicons devicon-postgresql-plain colored"/>
-                                    <p className="skills__text product_sans">Postgre SQL</p>
-                                </li>
-                                {/*PHP*/}
-                                <li className="skills__skill">
-                                    <span className="devicons devicon-php-plain colored"/>
-                                    <p className="skills__text product_sans">PHP</p>
+                                    <span className="devicons devicon-sass-plain colored"/>
+                                    <p className="skills__text product_sans">Sass</p>
                                 </li>
                                 {/*Mongo*/}
                                 <li className="skills__skill">

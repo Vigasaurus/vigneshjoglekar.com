@@ -4,8 +4,7 @@ import React, { Component } from 'react';
 //JS Imports
 import Siema from 'siema';
 
-let siemaCreated = false;
-let mySiemaWithDots;
+let mySiemaWithDots, slideIndex;
 
 export default class Projects extends Component {
 
@@ -19,6 +18,7 @@ export default class Projects extends Component {
         let projectsLinks = document.querySelectorAll(".projects__link");
         let prev = document.querySelector(".projects__prev");
         let next = document.querySelector(".projects__next");
+        document.querySelector("#projects").style.display = 'flex';
 
         //Siema settings
         class mySiema extends Siema {
@@ -56,11 +56,13 @@ export default class Projects extends Component {
                 for (let i = 0; i < activeLinks.length; i++) {
                     activeLinks[i].setAttribute("tabIndex", "0");
                 }
-                if (this.currentSlide === 0) prev.classList.add("projects__prev--disabled");
-                else
-                    if (this.currentSlide === 3)
-                        next.classList.add("projects__next--disabled");
-                else {
+                if (this.currentSlide === 0){
+                    prev.classList.add("projects__prev--disabled");
+                    next.classList.remove("projects__next--disabled");
+                } else if (this.currentSlide === 3){
+                    next.classList.add("projects__next--disabled");
+                    prev.classList.remove("projects__prev--disabled");
+                } else {
                     prev.classList.remove("projects__prev--disabled");
                     next.classList.remove("projects__next--disabled");
                 }
@@ -72,6 +74,20 @@ export default class Projects extends Component {
                     let addOrRemove = this.currentSlide === i ? "add" : "remove";
                     this.dots.querySelectorAll("span")[i].classList[addOrRemove]("projects__dot--active");
                 }
+                this.updateURL();
+            }
+
+            updateURL() {
+                if(this.currentSlide > 0)
+                    window.history.replaceState(2,
+                        "Vignesh Joglekar - Projects",
+                        "/projects/" + (this.currentSlide + 1)
+                    );
+                else
+                    window.history.replaceState(2,
+                        "Vignesh Joglekar - Projects",
+                        "/projects"
+                    );
             }
         }
 
@@ -86,6 +102,7 @@ export default class Projects extends Component {
                 this.addDots();
                 this.updateDots();
                 this.checkSlide();
+
             },
             onChange: function () {
                 this.updateDots();
@@ -98,33 +115,39 @@ export default class Projects extends Component {
         next.addEventListener("click", function () {
             mySiemaWithDots.next()
         });
-        document.addEventListener("keyup", (event) => {
-            if (this.props.activePage === "projects") {
-                if (event.key === "ArrowRight") {
-                    mySiemaWithDots.next();
-                } else if (event.key === "ArrowLeft") {
-                    mySiemaWithDots.prev();
-                }
-            }
-        });
     }
 
-    componentDidUpdate() {
-        if(siemaCreated === false && this.props.activePage === "projects"){
+    componentDidMount() {
+        document.querySelector("#projects").style.display = 'none';
+        setTimeout(() => {
+            slideIndex = window.location.pathname.replace("/", "");
             this.createSiema();
-            siemaCreated = true;
-        }
+            if(slideIndex.indexOf("/") > -1){
+                slideIndex = parseInt(slideIndex.substring(slideIndex.indexOf("/") + 1, slideIndex.indexOf("/") + 2), 10);
+                console.log(slideIndex);
+                if(slideIndex > 4 || slideIndex < 0){
+                    slideIndex = 0;
+                    window.history.replaceState(2,
+                        "Vignesh Joglekar - Projects",
+                        "/projects"
+                    );
+                }
 
-        if(siemaCreated){
-            mySiemaWithDots.updateDots();
-            mySiemaWithDots.checkSlide();
-        }
+                mySiemaWithDots.goTo(slideIndex - 1);
+                mySiemaWithDots.updateDots();
+                mySiemaWithDots.checkSlide();
+            }
+        });
 
+    }
+
+    componentWillUnmount() {
+        mySiemaWithDots = undefined;
     }
 
     render() {
         return (
-            <div id="projects_container" className="container theme animated slideInDown" hidden={!(this.props.activePage === "projects")}>
+            <div id="projects_container" className="container theme animated slideInDown">
                 <div className="page page--projects" id="projects">
                     <button className="projects__prev projects__prev--disabled">
                         <span className='icon-left-open'/>
@@ -149,7 +172,7 @@ export default class Projects extends Component {
                             <img className="projects__photo " src={require('./img/projects/gpvThumb.png')}
                                  alt="Github Profile Viewer Screenshot"/>
                                 <a className="projects__link projectLive product_sans"
-                                   href="https://vigneshjoglekar.com/projects/react/GithubProfileViewer/"
+                                   href="https://projects.vigneshjoglekar.com/GithubProfileViewer/"
                                    title="Open Github Profile Viewer"
                                    target="_blank" rel="noopener noreferrer">Open Project</a>
                                 <p className="projects__description gridDescription product_sans">Github Profile Viewer
@@ -174,7 +197,7 @@ export default class Projects extends Component {
                             </div>
                             <img className="projects__photo " src={require('./img/projects/siteThumb.png')} alt="This Website Screenshot"/>
                                 <a className="projects__link projectLive product_sans"
-                                   href="https://vigneshjoglekar.com/"
+                                   href="https://vigneshjoglekar.com"
                                    title="Open This Project"
                                    target="_blank" rel="noopener noreferrer">Open Project</a>
                                 <p className="projects__description gridDescription product_sans">This website, made as
@@ -222,7 +245,7 @@ export default class Projects extends Component {
                             <img className="projects__photo " src={require('./img/projects/minesweeperThumb.png')}
                                  alt="Minesweeper Client Screenshot"/>
                                 <a className="projects__link projectLive product_sans"
-                                   href="https://vigneshjoglekar.com/projects/games/Minesweeper/minesweeper"
+                                   href="https://projects.vigneshjoglekar.com/Minesweeper"
                                    title="Open Minesweeper" target="_blank" rel="noopener noreferrer">Open Project</a>
                                 <p className="projects__description gridDescription product_sans">Re-creation of the
                                     original

@@ -1,8 +1,13 @@
-# React Portfolio
+# Vignesh Joglekar Portfolio Website
 
- This is the repo for the pre-built sources for my portfolio site. 
- 
- #### Built: https://github.com/Vigasaurus/vigasaurus.github.io
- #### Live: https://vigneshjoglekar.com 
- 
- 
+Development Porfolio for Vignesh Joglekar. Find more about me, some of my recent projects as well as how to contact 
+me here.\
+
+Built with:
+- React.js
+- HTML5
+- CSS3
+- JavaScript / ES6
+- Fontello
+
+#### Live: https://vigneshjoglekar.com
