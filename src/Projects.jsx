@@ -171,13 +171,11 @@ export default class Projects extends Component {
                             </div>
                             <img className="projects__photo " src={require('./img/projects/plpThumb.png')}
                                 alt="Potluck Party Screenshot" />
-                            <a className="projects__link projectLive product_sans"
-                                href="https://projects.vigneshjoglekar.com/GithubProfileViewer/"
-                                title="Open Github Profile Viewer"
-                                target="_blank" rel="noopener noreferrer">Open Project</a>
                             <p className="projects__description gridDescription product_sans">Potluck Party web party planning application, organizing events, potlucks, or get-togethers in a modern and intuitive user experience</p>
-                            <span className="projects__link projects__link--code projectCode product_sans"
-                                target="_blank" rel="noopener noreferrer">Launching Q1 2020</span>
+                            <a className="projects__link projects__link--code projectCode product_sans"
+                                href="https://potluckparty.com"
+                                rel="noopener noreferrer"
+                                target="_blank" rel="noopener noreferrer">Launching Q1 2020</a>
                         </div>
 
                         {/*SH*/}
@@ -212,18 +210,14 @@ export default class Projects extends Component {
                                 <span className="projects__tag">Webpack</span>
                             </div>
                             <img className="projects__photo " src={require('./img/projects/siteThumb.png')} alt="This Website Screenshot" />
-                            <a className="projects__link projectLive product_sans"
-                                href="https://vigneshjoglekar.com"
-                                title="Open This Project"
-                                target="_blank" rel="noopener noreferrer">Open Project</a>
-                            <p className="projects__description gridDescription product_sans">This website, made as
-                                a
-                                single-page-application with React.js and JavaScript ES6. Compiled and built with
-                                    Webpack. Deployed on Netlify. Version 3, made in Gatsby and GraphQL launching Spring 2020. Preview it <a href="https://2019.vigneshjoglekar.com">here</a>.</p>
                             <a className="projects__link projects__link--code projectCode product_sans"
                                 href="https://github.com/Vigasaurus/vigasaurus.github.io/tree/master"
                                 title="Github Profile Viewer Source Code"
                                 target="_blank" rel="noopener noreferrer">Source Code</a>
+                            <p className="projects__description gridDescription product_sans">This website, made as
+                                a
+                                single-page-application with React.js and JavaScript ES6. Compiled and built with
+                                    Webpack. Deployed on Netlify. Version 3, made in Gatsby and GraphQL launching Spring 2020. Preview it <a style={{ color: '#ddd' }} href="https://2019.vigneshjoglekar.com">here</a>.</p>
                         </div>
                     </div>
                 </div>

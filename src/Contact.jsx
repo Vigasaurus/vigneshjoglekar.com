@@ -11,7 +11,7 @@ export default class Contact extends Component {
                         {/*Github*/}
                         <li className="socials__list-item">
                             <a className="socials__item link" href="https://github.com/Vigasaurus"
-                               target="_blank" rel="noopener noreferrer">
+                                target="_blank" rel="noopener noreferrer">
                                 <span className="icon icon--social icon-github-circled" />
                                 <p className="github product_sans">GitHub</p>
                             </a>
@@ -20,7 +20,7 @@ export default class Contact extends Component {
                         {/*Twitter*/}
                         <li className="socials__list-item">
                             <a className="socials__item link" href="https://twitter.com/Vigasaurus"
-                               target="_blank" rel="noopener noreferrer">
+                                target="_blank" rel="noopener noreferrer">
                                 <span className="icon icon--social icon-twitter-circled" />
                                 <p className="twitter product_sans">Twitter</p>
                             </a>
@@ -29,29 +29,29 @@ export default class Contact extends Component {
                         {/*Email*/}
                         <li className="socials__list-item">
                             <a className="socials__item link" href="mailto:vigneshjoglekar4@gmail.com"
-                               target="_blank" rel="noopener noreferrer">
+                                target="_blank" rel="noopener noreferrer">
                                 <span className="icon icon--social icon-mail-circled" />
                                 <p className="mail product_sans">Email</p>
                             </a>
                         </li>
 
                         {/*LinkedIn*/}
-                        <li className="socials__list-item">
+                        {/* <li className="socials__list-item">
                             <a className="socials__item link"
                                href="https://www.linkedin.com/in/vignesh-joglekar-43703a161/" target="_blank"
                                rel="noopener noreferrer">
                                 <span className="icon icon--social icon-linkedin-circled" />
                                 <p className="linkedin product_sans">LinkedIn</p>
                             </a>
-                        </li>
+                        </li> */}
 
                         {/*Resume*/}
-                        <li className="socials__list-item">
+                        {/* <li className="socials__list-item">
                             <a className="socials__item link" href="./docs/Vignesh%20Joglekar.pdf" rel="noreferrer">
                                 <span className="icon icon--social icon-doc-circled" />
                                 <p className="resume product_sans">R&eacute;sum&eacute;</p>
                             </a>
-                        </li>
+                        </li> */}
                     </ul>
                 </div>
             </div>
