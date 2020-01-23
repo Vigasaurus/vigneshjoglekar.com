@@ -167,15 +167,14 @@ export default class Projects extends Component {
                                 <span className="projects__tag">MySQL</span>
                                 <span className="projects__tag">ES6</span>
                                 <span className="projects__tag">Node</span>
-
                             </div>
                             <img className="projects__photo " src={require('./img/projects/plpThumb.png')}
                                 alt="Potluck Party Screenshot" />
-                            <p className="projects__description gridDescription product_sans">Potluck Party web party planning application, organizing events, potlucks, or get-togethers in a modern and intuitive user experience</p>
                             <a className="projects__link projects__link--code projectCode product_sans"
                                 href="https://potluckparty.com"
                                 rel="noopener noreferrer"
                                 target="_blank" rel="noopener noreferrer">Launching Q1 2020</a>
+                            <p className="projects__description gridDescription product_sans">Potluck Party web party planning application, organizing events, potlucks, or get-togethers in a modern and intuitive user experience</p>
                         </div>
 
                         {/*SH*/}
