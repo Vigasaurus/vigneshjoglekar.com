@@ -56,10 +56,10 @@ export default class Projects extends Component {
                 for (let i = 0; i < activeLinks.length; i++) {
                     activeLinks[i].setAttribute("tabIndex", "0");
                 }
-                if (this.currentSlide === 0){
+                if (this.currentSlide === 0) {
                     prev.classList.add("projects__prev--disabled");
                     next.classList.remove("projects__next--disabled");
-                } else if (this.currentSlide === 3){
+                } else if (this.currentSlide === 3) {
                     next.classList.add("projects__next--disabled");
                     prev.classList.remove("projects__prev--disabled");
                 } else {
@@ -78,7 +78,7 @@ export default class Projects extends Component {
             }
 
             updateURL() {
-                if(this.currentSlide > 0)
+                if (this.currentSlide > 0)
                     window.history.replaceState(2,
                         "Vignesh Joglekar - Projects",
                         "/projects/" + (this.currentSlide + 1)
@@ -122,10 +122,10 @@ export default class Projects extends Component {
         setTimeout(() => {
             slideIndex = window.location.pathname.replace("/", "");
             this.createSiema();
-            if(slideIndex.indexOf("/") > -1){
+            if (slideIndex.indexOf("/") > -1) {
                 slideIndex = parseInt(slideIndex.substring(slideIndex.indexOf("/") + 1, slideIndex.indexOf("/") + 2), 10);
                 console.log(slideIndex);
-                if(slideIndex > 4 || slideIndex < 0){
+                if (slideIndex > 4 || slideIndex < 0) {
                     slideIndex = 0;
                     window.history.replaceState(2,
                         "Vignesh Joglekar - Projects",
@@ -150,38 +150,56 @@ export default class Projects extends Component {
             <div id="projects_container" className="container theme animated slideInDown">
                 <div className="page page--projects" id="projects">
                     <button className="projects__prev projects__prev--disabled">
-                        <span className='icon-left-open'/>
+                        <span className='icon-left-open' />
                     </button>
                     <button className="projects__next " aria-label="Next Project">
-                        <span className='icon-right-open'/>
+                        <span className='icon-right-open' />
                     </button>
                     <div className="projects">
 
-                        {/*GPV*/}
+                        {/*PLP*/}
                         <div className="projects__project">
-                            <h3 className="projects__title product_sans">Github Profile Viewer</h3>
+                            <h3 className="projects__title product_sans">Potluck Party</h3>
                             <div className="projects__tags">
                                 <span className="projects__tag">React</span>
-                                <span className="projects__tag">Bootstrap</span>
-                                <span className="projects__tag">Flexbox</span>
+                                <span className="projects__tag">Koa</span>
+                                <span className="projects__tag">Sass</span>
+                                <span className="projects__tag">MySQL</span>
                                 <span className="projects__tag">ES6</span>
-                                <span className="projects__tag">jQuery</span>
-                                <span className="projects__tag">RESTful</span>
+                                <span className="projects__tag">Node</span>
 
                             </div>
-                            <img className="projects__photo " src={require('./img/projects/gpvThumb.png')}
-                                 alt="Github Profile Viewer Screenshot"/>
-                                <a className="projects__link projectLive product_sans"
-                                   href="https://projects.vigneshjoglekar.com/GithubProfileViewer/"
-                                   title="Open Github Profile Viewer"
-                                   target="_blank" rel="noopener noreferrer">Open Project</a>
-                                <p className="projects__description gridDescription product_sans">Github Profile Viewer
-                                    made in
-                                    React.js utilizing the Github RESTful API.</p>
-                                <a className="projects__link projects__link--code projectCode product_sans"
-                                   href="https://github.com/Vigasaurus/vigasaurus.github.io/tree/master/projects/react/GithubProfileViewer"
-                                   title="Github Profile Viewer Source Code"
-                                   target="_blank" rel="noopener noreferrer">Source Code</a>
+                            <img className="projects__photo " src={require('./img/projects/plpThumb.png')}
+                                alt="Potluck Party Screenshot" />
+                            <a className="projects__link projectLive product_sans"
+                                href="https://projects.vigneshjoglekar.com/GithubProfileViewer/"
+                                title="Open Github Profile Viewer"
+                                target="_blank" rel="noopener noreferrer">Open Project</a>
+                            <p className="projects__description gridDescription product_sans">Potluck Party web party planning application, organizing events, potlucks, or get-togethers in a modern and intuitive user experience</p>
+                            <span className="projects__link projects__link--code projectCode product_sans"
+                                target="_blank" rel="noopener noreferrer">Launching Q1 2020</span>
+                        </div>
+
+                        {/*SH*/}
+                        <div className="projects__project">
+                            <h3 className="projects__title product_sans">Secret Hitler</h3>
+                            <div className="projects__tags">
+                                <span className="projects__tag dark-theme">React</span>
+                                <span className="projects__tag dark-theme">Sass</span>
+                                <span className="projects__tag dark-theme">Express.js</span>
+                                <span className="projects__tag dark-theme">Socket.io</span>
+                                <span className="projects__tag dark-theme">MongoDB</span>
+                                <span className="projects__tag dark-theme">Cloud Functions</span>
+                            </div>
+                            <img className="projects__photo " src={require('./img/projects/shThumb.png')}
+                                alt="Secret Hitler Online Game Screenshot" />
+                            <a className="projects__link projectLive product_sans"
+                                href="https://secrethitler.io"
+                                title="Open Secret Hitler" target="_blank" rel="noopener noreferrer">Open Project</a>
+                            <p className="projects__description gridDescription product_sans">Major Contributor and Co-Maintainer of a web adaptation of the hit board game, Secret Hitler. </p>
+                            <a className="projects__link projects__link--code projectCode product_sans"
+                                href="https://github.com/cozuya/secret-hitler"
+                                title="Secret Hitler Source Code" target="_blank" rel="noopener noreferrer">Source Code</a>
                         </div>
 
                         {/*This*/}
@@ -190,72 +208,23 @@ export default class Projects extends Component {
                             <div className="projects__tags">
                                 <span className="projects__tag">React</span>
                                 <span className="projects__tag">ES6</span>
-                                <span className="projects__tag">jQuery</span>
+                                <span className="projects__tag">Sass</span>
                                 <span className="projects__tag">Webpack</span>
-
-
                             </div>
-                            <img className="projects__photo " src={require('./img/projects/siteThumb.png')} alt="This Website Screenshot"/>
-                                <a className="projects__link projectLive product_sans"
-                                   href="https://vigneshjoglekar.com"
-                                   title="Open This Project"
-                                   target="_blank" rel="noopener noreferrer">Open Project</a>
-                                <p className="projects__description gridDescription product_sans">This website, made as
-                                    a
-                                    single-page-application with React.js and JavaScript ES6. Compiled and Built with
-                                    Webpack.</p>
-                                <a className="projects__link projects__link--code projectCode product_sans"
-                                   href="https://github.com/Vigasaurus/vigasaurus.github.io/tree/master"
-                                   title="Github Profile Viewer Source Code"
-                                   target="_blank" rel="noopener noreferrer">Source Code</a>
+                            <img className="projects__photo " src={require('./img/projects/siteThumb.png')} alt="This Website Screenshot" />
+                            <a className="projects__link projectLive product_sans"
+                                href="https://vigneshjoglekar.com"
+                                title="Open This Project"
+                                target="_blank" rel="noopener noreferrer">Open Project</a>
+                            <p className="projects__description gridDescription product_sans">This website, made as
+                                a
+                                single-page-application with React.js and JavaScript ES6. Compiled and built with
+                                    Webpack. Deployed on Netlify. Version 3, made in Gatsby and GraphQL launching Spring 2020. Preview it <a href="https://2019.vigneshjoglekar.com">here</a>.</p>
+                            <a className="projects__link projects__link--code projectCode product_sans"
+                                href="https://github.com/Vigasaurus/vigasaurus.github.io/tree/master"
+                                title="Github Profile Viewer Source Code"
+                                target="_blank" rel="noopener noreferrer">Source Code</a>
                         </div>
-
-                        {/*BPACares*/}
-                        <div className="projects__project">
-                            <h3 className="projects__title product_sans">BPACares.org</h3>
-                            <div className="projects__tags">
-                                <span className="projects__tag dark-theme">HTML</span>
-                                <span className="projects__tag dark-theme">CSS</span>
-                                <span className="projects__tag dark-theme">JavaScript</span>
-                                <span className="projects__tag dark-theme">jQuery</span>
-
-                            </div>
-                            <img className="projects__photo " src={require('./img/projects/bpaCaresThumb.png')} alt="BPACares.org Screenshot"/>
-                                <a className="projects__link projectLive product_sans" href="https://bpacares.org"
-                                   title="Open BPACares.org" target="_blank" rel="noopener noreferrer">Open Project</a>
-                                <p className="projects__description gridDescription product_sans">Business Professionals
-                                    of America Team Project, made with HTML5 and CSS3 in a team setting, properly hosted
-                                    and issue tracked using GitHub.</p>
-                                <a className="projects__link projects__link--code projectCode product_sans"
-                                   href="https://github.com/BPACares/BPACares.org" title="BPACares.org Source Code"
-                                   target="_blank" rel="noopener noreferrer">Source Code</a>
-                        </div>
-
-                        {/*Minesweeper*/}
-                        <div className="projects__project">
-                            <h3 className="projects__title product_sans">Minesweeper</h3>
-                            <div className="projects__tags">
-                                <span className="projects__tag dark-theme">HTML</span>
-                                <span className="projects__tag dark-theme">CSS</span>
-                                <span className="projects__tag dark-theme">P5.js</span>
-                                <span className="projects__tag dark-theme">Flexbox</span>
-                                <span className="projects__tag dark-theme">JavaScript</span>
-                                <span className="projects__tag dark-theme">ES6</span>
-                            </div>
-                            <img className="projects__photo " src={require('./img/projects/minesweeperThumb.png')}
-                                 alt="Minesweeper Client Screenshot"/>
-                                <a className="projects__link projectLive product_sans"
-                                   href="https://projects.vigneshjoglekar.com/Minesweeper"
-                                   title="Open Minesweeper" target="_blank" rel="noopener noreferrer">Open Project</a>
-                                <p className="projects__description gridDescription product_sans">Re-creation of the
-                                    original
-                                    Minesweeper Puzzle, made in JavaScript with P5.JS library, includes randomly
-                                    generated puzzles with completely customizable gameplay</p>
-                                <a className="projects__link projects__link--code projectCode product_sans"
-                                   href="https://github.com/Vigasaurus/vigasaurus.github.io/tree/master/projects/games/Minesweeper"
-                                   title="Minesweeper Source Code" target="_blank" rel="noopener noreferrer">Source Code</a>
-                        </div>
-
                     </div>
                 </div>
             </div>

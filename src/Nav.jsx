@@ -17,15 +17,15 @@ export default class Nav extends Component {
                         <li className="nav__item" onClick={() => this.props.changePage('projects')}>
                             <a id="projects_link" className="nav__link link product_sans" title="My Projects">Projects</a>
                         </li>
-                        <li className="nav__item" onClick={() => this.props.changePage('orgs')}>
+                        {/* <li className="nav__item" onClick={() => this.props.changePage('orgs')}>
                             <a id="orgs_link" className="nav__link link product_sans " title="Organizations">Organizations</a>
-                        </li>
+                        </li> */}
                         <li className="nav__item" onClick={() => this.props.changePage('contact')}>
                             <a id="contact_link" className="nav__link link product_sans " title="Contact Me">Contact</a>
                         </li>
                     </ul>
-                    <button className="nav__hamburger theme icon-menu" title="Open the Menu" onClick={() => this.props.menu('show')}/>
-                    <button className="nav__close-menu theme icon-cancel" title="Close the Menu" onClick={() => this.props.menu('hide')}/>
+                    <button className="nav__hamburger theme icon-menu" title="Open the Menu" onClick={() => this.props.menu('show')} />
+                    <button className="nav__close-menu theme icon-cancel" title="Close the Menu" onClick={() => this.props.menu('hide')} />
                 </nav>
             </div>
         );
