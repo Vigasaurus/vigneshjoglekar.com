@@ -216,7 +216,7 @@ export default class Projects extends Component {
                             <p className="projects__description gridDescription product_sans">This website, made as
                                 a
                                 single-page-application with React.js and JavaScript ES6. Compiled and built with
-                                    Webpack. Deployed on Netlify. Version 3, made in Gatsby and GraphQL launching Spring 2020. Preview it <a style={{ color: '#ddd' }} href="https://2019.vigneshjoglekar.com">here</a>.</p>
+                                    Webpack. Deployed on Netlify. Version 3, made in Gatsby and GraphQL launching Summer 2020. Preview it <a style={{ color: '#ddd' }} href="https://2020.vigneshjoglekar.com">here</a>.</p>
                         </div>
                     </div>
                 </div>
