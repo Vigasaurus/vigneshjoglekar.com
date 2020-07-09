@@ -28,7 +28,7 @@ export default class Contact extends Component {
 
                         {/*Email*/}
                         <li className="socials__list-item">
-                            <a className="socials__item link" href="mailto:vigneshjoglekar4@gmail.com"
+                            <a className="socials__item link" href="mailto:hey@vigneshjoglekar.com"
                                 target="_blank" rel="noopener noreferrer">
                                 <span className="icon icon--social icon-mail-circled" />
                                 <p className="mail product_sans">Email</p>
