@@ -5,6 +5,18 @@
   width: 0;
 }
 
+.hero {
+  width: 20%;
+  margin-bottom: 5px;
+}
+
+@media screen and (max-width: 900px) {
+  .hero {
+    width: 60%;
+    margin-bottom: 5px;
+  }
+}
+
 .nav {
   display: -webkit-box;
   display: -ms-flexbox;
