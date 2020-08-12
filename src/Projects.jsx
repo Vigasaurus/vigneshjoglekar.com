@@ -173,8 +173,8 @@ export default class Projects extends Component {
                             <a className="projects__link projects__link--code projectCode product_sans"
                                 href="https://potluckparty.com"
                                 rel="noopener noreferrer"
-                                target="_blank" rel="noopener noreferrer">Launching Q1 2020</a>
-                            <p className="projects__description gridDescription product_sans">Potluck Party web party planning application, organizing events, potlucks, or get-togethers in a modern and intuitive user experience</p>
+                                target="_blank" rel="noopener noreferrer">Launching Q3 2020</a>
+                            <p className="projects__description gridDescription product_sans">Potluck Party web party planning application in a modern and intuitive user experience</p>
                         </div>
 
                         {/*SH*/}
