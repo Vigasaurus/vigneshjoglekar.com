@@ -53,10 +53,16 @@ export default class Site extends Component {
         if(this.state.currentPageIndex !== 0){
             window.history.replaceState(this.state.currentPageIndex, "", "");
             document.title = "Vignesh Joglekar - " + pagesFormatted[this.state.currentPageIndex];
+            window._paq.push(['setCustomUrl', `/${pageRaws[this.state.currentPageIndex]}`]);
+            window._paq.push(['setDocumentTitle', pagesFormatted[this.state.currentPageIndex]]);
+            window._paq.push(['trackPageView']);
         }
         else {
             window.history.replaceState(this.state.currentPageIndex, "", "/");
             document.title = "Vignesh Joglekar";
+            window._paq.push(['setCustomUrl', '/']);
+            window._paq.push(['setDocumentTitle', 'Home']);
+            window._paq.push(['trackPageView']);
         }
     }
 
