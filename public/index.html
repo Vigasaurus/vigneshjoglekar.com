@@ -12,18 +12,30 @@
             </script> -->
       <!-- GA END -->
 
-      <!-- GA TEST -->
-		<script async src="https://ga.vigneshjoglekar.com/a.js"></script>
-		<script>
-		  window.dataLayer = window.dataLayer || [];
-		  function gtag(){dataLayer.push(arguments);}
-		  gtag('js', new Date());
+      <!-- Self Hosted Analytics -->
+      <script type="text/javascript">
+            var _paq = (window._paq = window._paq || []);
+            /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+            _paq.push(['trackPageView']);
+            (function() {
+                  var u = '//analytics.vigneshjoglekar.com/';
+                  _paq.push(['setTrackerUrl', u + 'a.php']);
+                  _paq.push(['setSiteId', '2']);
+                  var d = document,
+                        g = d.createElement('script'),
+                        s = d.getElementsByTagName('script')[0];
+                  g.type = 'text/javascript';
+                  g.async = true;
+                  g.src = u + 'a.js';
+                  s.parentNode.insertBefore(g, s);
+            })();
 
-		  gtag('config', 'UA-123969241-1');
-            </script>
-      <!-- GA END -->
-
-
+            window.addEventListener('hashchange', function() {
+                  _paq.push(['setCustomUrl', '/' + window.location.hash.substr(1)]);
+                  _paq.push(['trackPageView']);
+            });
+      </script>
+      <!-- ANALYTICS END-->
 
         <link rel="manifest" href="./manifest.json">
         <meta charset="UTF-8">
