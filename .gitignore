@@ -71,3 +71,6 @@ phpmailer/
 .tgz
 
 .idea/
+# Local Netlify folder
+.netlify
+.vscode
