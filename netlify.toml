@@ -1,2 +1,2 @@
 [[plugins]]
-package = "../plausible-netlify/dist"
+package = "netlify-plugin-plausible"
